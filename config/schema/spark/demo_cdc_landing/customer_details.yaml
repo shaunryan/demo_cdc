@@ -6,7 +6,7 @@ fields:
 - metadata: {}
   name: id
   nullable: true
-  type: string
+  type: integer
 - metadata: {}
   name: first_name
   nullable: true
@@ -30,7 +30,7 @@ fields:
 - metadata: {}
   name: amount
   nullable: true
-  type: string
+  type: double
 - metadata: {}
   name: _corrupt_record
   nullable: true

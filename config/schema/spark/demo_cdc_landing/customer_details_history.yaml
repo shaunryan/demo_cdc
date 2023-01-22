@@ -34,11 +34,11 @@ fields:
 - metadata:
   name: start_date
   nullable: true
-  type: string
+  type: date
 - metadata:
   name: end_date
   nullable: true
-  type: string
+  type: date
 - metadata: {}
   name: is_current
   nullable: true

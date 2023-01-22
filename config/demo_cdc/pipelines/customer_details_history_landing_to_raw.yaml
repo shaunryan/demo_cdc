@@ -19,21 +19,22 @@ dataflow:
           mode: PERMISSIVE
           inferSchema: false
           header: true
-#       exceptions:
-#           path: "delta_lake/{{ database_name }}/customer_details_history_exceptions"
-#           database: "{{ database_name }}"
-#           table: "customer_details_history_exceptions"
-#       thresholds:
-#         error:
-#           exception_count: 0
-#           exception_percent: 0
-#           max_rows: null
-#           min_rows: 0
-#         warning:
-#           exception_count: 0
-#           exception_percent: 0
-#           max_rows: null
-#           min_rows: 0
+          dateFormat: yyyy-M-d
+      exceptions:
+          path: "delta_lake/{{ database_name }}/customer_details_history_exceptions"
+          database: "{{ database_name }}"
+          table: "customer_details_history_exceptions"
+      thresholds:
+        error:
+          exception_count: 0
+          exception_percent: 80
+          max_rows: 100
+          min_rows: 1
+        warning:
+          exception_count: 0
+          exception_percent: 20
+          max_rows: 100
+          min_rows: 1
 
 
 
