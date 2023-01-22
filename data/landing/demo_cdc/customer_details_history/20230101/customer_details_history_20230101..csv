@@ -2,14 +2,14 @@ key,id,first_name,last_name,email,gender,job_title,amount,start_date,end_date,is
 1,1,Davidde,Legier,dlegier0@mail.ru,Agender,Editor,86.5,2022-01-01,2022-03-01,N
 2,2,Panchito,Scirman,pscirman1@kickstarter.com,Male,Junior Executive,36.18,2022-02-01,2022-05-01,N
 3,3,Chic,Ickowics,cickowics2@booking.com,Male,Research Associate,35.54,2022-03-01,2022-07-01,N
-4,4,Pascale,Jedrzaszkiewicz,pjedrzaszkiewicz3@auda.org.au,Male,Safety Technician IV,73.21,2022-04-01,9999-12-31,Y
+4,4,Pascale,Jedrzaszkiewicz,pjedrzaszkiewicz3@auda.org.au,Male,Safety Technician IV,73.21,2022-04-01,2023-01-01,Y
 5,5,Sara,Whiterod,swhiterod4@hhs.gov,Female,Assistant Manager,47.85,2022-05-01,2022-12-01,N
 6,6,Mariska,Antrum,mantrum5@nytimes.com,Female,Tax Accountant,16.37,2022-06-01,2022-11-12,N
 7,7,Ingemar,Petrus,ipetrus6@blogspot.com,Male,Chief Design Engineer,49.02,2022-07-01,2022-10-23,N
 8,8,Anstice,Hollingdale,ahollingdale7@yahoo.co.jp,Female,Cost Accountant,21.94,2022-08-01,2022-08-14,N
 9,9,Chaunce,Holdforth,choldforth8@ca.gov,Non-binary,Chief Design Engineer,72.0,2022-09-01,2022-12-31,N
 10,10,Blinni,Fenty,bfenty9@paginegialle.it,Female,Assistant Media Planner,38.98,2022-10-01,2022-11-25,N
-11,1,Davidde,Legier,dlegier0@mail.ru,Agender,Editor,90.0,2021-03-01,9999-12-31,Y
+11,1,Davidde,Legier,dlegier0@mail.ru,Agender,Editor,90.0,2022-03-01,9999-12-31,Y
 12,2,Panchito,Scirman,pscirman1@kickstarter.com,Male,Junior Executive,40.0,2022-05-01,2022-07-01,N
 13,2,Panchito,Scirman,pscirman1@kickstarter.com,Male,Senior Executive,50.0,2022-07-01,9999-12-31,Y
 14,3,Chic,Ickowics,cickowics2@booking.com,Male,Research Associate,35.12,2022-07-01,9999-12-31,Y
@@ -18,3 +18,7 @@ key,id,first_name,last_name,email,gender,job_title,amount,start_date,end_date,is
 17,7,Ingemar,Petrus,ipetrus6@blogspot.com,Male,Chief Design Engineer,12.32,2022-10-23,9999-12-31,Y
 18,8,Anstice,Hollingdale,ahollingdale7@yahoo.co.jp,Female,Cost Accountant,65.65,2022-08-14,9999-12-31,Y
 19,9,Chaunce,Holdforth,choldforth8@ca.gov,Non-binary,Chief Design Engineer,72.0,2022-12-31,9999-12-31,Y
+20,4,Pascale,Jedrzaszkiewicz,pjedrzaszkiewicz3@auda.org.au,Male,Safety Technician IV,173.21,2023-01-01,9999-12-31,Y
+
+
+U,4,Pascale,Jedrzaszkiewicz,pjedrzaszkiewicz3@auda.org.au,Male,Safety Technician IV,173.21
