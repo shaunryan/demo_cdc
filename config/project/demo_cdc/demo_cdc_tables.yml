@@ -1,0 +1,32 @@
+database: demo_cdc
+tables:
+- enable_exceptions: true
+  keys: []
+  name: customer_details
+  thresholds:
+    thresholds:
+      error:
+        exception_count: 0
+        exception_percent: 80
+        max_rows: 100000000
+        min_rows: 0
+      warning:
+        exception_count: 0
+        exception_percent: 0
+        max_rows: 100000000
+        min_rows: 1
+- enable_exceptions: true
+  keys: []
+  name: customer_details_history
+  thresholds:
+    thresholds:
+      error:
+        exception_count: 0
+        exception_percent: 80
+        max_rows: 100000000
+        min_rows: 0
+      warning:
+        exception_count: 0
+        exception_percent: 0
+        max_rows: 100000000
+        min_rows: 1
