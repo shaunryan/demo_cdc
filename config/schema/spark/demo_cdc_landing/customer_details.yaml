@@ -1,5 +1,9 @@
 fields:
 - metadata: {}
+  name: key
+  nullable: true
+  type: integer
+- metadata: {}
   name: flag
   nullable: true
   type: string

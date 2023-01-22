@@ -1,5 +1,6 @@
 CREATE TABLE {{ database_name }}.{{ table_name }}
 (
+	`key` integer,
   	`flag` string  ,
 	`id` integer  ,
 	`first_name` string  ,
