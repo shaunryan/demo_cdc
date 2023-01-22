@@ -1,4 +1,4 @@
-id,first_name,last_name,email,gender,job_title,amount
+flag,id,first_name,last_name,email,gender,job_title,amount
 U,11,Giralda,Baglan,gbaglan0@stanford.edu,Female,Computer Systems Analyst IV,172.08
 U,12,Ceil,Hulstrom,chulstrom1@ucla.edu,Female,VP Sales,186.38
 D,13,Willabella,Eliff,weliff2@tinypic.com,Female,Clinical Specialist,7.76
