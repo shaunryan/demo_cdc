@@ -44,6 +44,7 @@ yetl_wf.load(project, tables, landing_to_raw, timeslice, OverwriteSave, maxparal
 # MAGIC 
 # MAGIC CREATE TABLE IF NOT EXISTS demo_cdc_raw.customer_details_hist
 # MAGIC (
+# MAGIC 	`key` integer,
 # MAGIC   `flag` string  ,
 # MAGIC 	`id` int  ,
 # MAGIC 	`first_name` string  ,
@@ -65,6 +66,7 @@ yetl_wf.load(project, tables, landing_to_raw, timeslice, OverwriteSave, maxparal
 # MAGIC 
 # MAGIC INSERT INTO demo_cdc_raw.customer_details_hist
 # MAGIC (
+# MAGIC 	`key`,
 # MAGIC   `flag` ,
 # MAGIC 	`id`,
 # MAGIC 	`first_name` ,
@@ -78,6 +80,7 @@ yetl_wf.load(project, tables, landing_to_raw, timeslice, OverwriteSave, maxparal
 # MAGIC 	`_dataset_id`
 # MAGIC )
 # MAGIC select
+# MAGIC 	`key`,
 # MAGIC   `flag` ,
 # MAGIC 	`id`,
 # MAGIC 	`first_name` ,
@@ -137,6 +140,7 @@ assert history_count == 20, f"hist_count={history_count}"
 # MAGIC create or replace view demo_cdc_raw.v_customer_details as
 # MAGIC 
 # MAGIC select
+# MAGIC   `key`,
 # MAGIC   _source,
 # MAGIC   start_date,
 # MAGIC   end_date,
@@ -153,6 +157,7 @@ assert history_count == 20, f"hist_count={history_count}"
 # MAGIC from
 # MAGIC (
 # MAGIC   select
+# MAGIC       `key`,
 # MAGIC       _source,
 # MAGIC       start_date,
 # MAGIC       case _is_history_migration
@@ -173,6 +178,7 @@ assert history_count == 20, f"hist_count={history_count}"
 # MAGIC   from
 # MAGIC   (
 # MAGIC     select
+# MAGIC       `key`,
 # MAGIC       'customer_details' as _source,
 # MAGIC       cast(_timeslice as date) as start_date,
 # MAGIC       cast(null as date) as end_date,
@@ -189,6 +195,7 @@ assert history_count == 20, f"hist_count={history_count}"
 # MAGIC     from demo_cdc_raw.customer_details
 # MAGIC     union all
 # MAGIC     select
+# MAGIC       `key`,
 # MAGIC       'customer_details_hist' as _source,
 # MAGIC       cast(_timeslice as date) as start_date,
 # MAGIC       cast(null as date) as end_date,
@@ -205,6 +212,7 @@ assert history_count == 20, f"hist_count={history_count}"
 # MAGIC     from demo_cdc_raw.customer_details_hist
 # MAGIC     union all
 # MAGIC     select
+# MAGIC       `key`,
 # MAGIC       'customer_details_history' as _source,
 # MAGIC       start_date,
 # MAGIC       end_date,
@@ -237,7 +245,7 @@ from datetime import datetime
 # .strftime('Y%-%m-d%')
 snapshots = spark.sql("select distinct start_date from demo_cdc_raw.v_customer_details").collect()
 snapshots = [r.start_date.strftime('%Y-%m-%d') for r in snapshots]
-snapshots
+snapshots = snapshots + [ '2022-08-13']
 
 
 # COMMAND ----------
@@ -289,4 +297,4 @@ result = (df_all
 # MAGIC 
 # MAGIC select *
 # MAGIC from demo_cdc_raw.customer_details_snapshot
-# MAGIC where snapshot_date = cast('2022-01-01' as date)
+# MAGIC where snapshot_date = cast('2022-08-13' as date)
