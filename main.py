@@ -5,16 +5,12 @@ import yaml
 import sys
 
 print(sys.argv)
-arg_timeslice = sys.argv[0]
+arg_timeslice = sys.argv[1]
 arg_timeslice = arg_timeslice.split("-")
 year = arg_timeslice[0]
 month = arg_timeslice[1]
 day = arg_timeslice[2]
 
-arg_timeslice = sys.argv[0]
-
-# timeslice = Timeslice(year=2021, month=1, day=1)
-# timeslice = Timeslice(year=2021, month=1, day=2)
 timeslice = Timeslice(year=year, month=month, day=day)
 project = "demo_cdc"
 maxparallel = 2
